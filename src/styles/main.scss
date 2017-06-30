@@ -1,0 +1,46 @@
+/* Sass Variables */
+
+$green: #629c66;
+
+/* Universal Styles */
+html {
+    /*src: url('../assets/fonts/aruna-regular.ttf') format('truetype');*/
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+/* Flex Classes */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Intro */
+.intro {
+    height: 80%;
+}
+
+/* Quote Diver */
+
+.quote-divider {
+    height: 20%;
+    background-color: $green;
+    color: #fff;
+}
+
+.section-margin {
+
+}
+
+
+
