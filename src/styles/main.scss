@@ -25,6 +25,10 @@ html {
     flex-direction: column;
 }
 
+.flex-center {
+    align-items: center;
+}
+
 /* Intro */
 .intro {
     height: 80%;
@@ -40,6 +44,13 @@ html {
 
 .section-margin {
 
+}
+
+/* Experience Style */
+
+.job-summary {
+    text-align: left;
+    padding-top: 20px;
 }
 
 

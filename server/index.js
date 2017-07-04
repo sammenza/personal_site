@@ -4,8 +4,10 @@ const app = express();
 
 const path = require('path');
 
-const _dirname = '../dist';
+app.use(express.static(path.resolve(__dirname + '/../dist/')));
 
-app.use(express.static('dist'));
+console.log("dirname" + path.resolve(__dirname + '/../node_modules/'));
+
+app.use('/scripts', express.static(path.resolve(__dirname + '/../node_modules/')));
 
 app.listen(3000);
