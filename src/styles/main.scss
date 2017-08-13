@@ -21,17 +21,57 @@ html {
     display: flex;
 }
 
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-center {
+/* Intro */
+.intro {
+    height: 150%;
+    background-image: url("../assets/backgrounds/front-page-no-words.gif");
+    background-size:cover;
     align-items: center;
 }
 
-/* Intro */
+.description {
+    color: white;
+    h1 {
+        font-size: 64pt;
+    }
+    h2 {
+        font-size: 50px;
+        text-align: left;
+        margin-left: 38px;
+    }
+    h4{
+        font-size: 36px;
+        text-align: left;
+        margin-left: 38px;
+    }
+}
+
+@media all and (min-width: 1563px) {
+    .description {
+        margin-top: 400px;
+    }
+}
+
+@media all and (min-width: 1562) {
+
 .intro {
-    height: 80%;
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+
+    .intro::after {
+          content: "";
+          background: url(image.jpg);
+          opacity: 0.5;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+    }
 }
 
 /* Quote Diver */
