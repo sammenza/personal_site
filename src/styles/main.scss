@@ -52,6 +52,22 @@ hr {
     color: $teal-main;
 }
 
+.site-section {
+    margin-top: 30px;
+    min-height: 300px;
+    padding-bottom: 40px;
+    .description {
+        font-size: 1.3em;
+        padding-top: 15px;
+    }
+}
+
+.sub-header {
+    color: $teal-dark;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
 /* Intro */
 .intro {
     height: 80%;
@@ -80,30 +96,23 @@ hr {
 .section-margin {
 
 }
-/* Experience Style */
+/* Skills */
 
-.job-summary {
-    text-align: left;
-    padding-top: 20px;
-}
-
-/* General Section */
-
-.site-section {
-    margin-top: 30px;
-    min-height: 300px;
-    padding-bottom: 40px;
-    .description {
-        font-size: 1.3em;
-        padding-top: 15px;
+.skills-container {
+    img {
+        width: 100%;
     }
 }
 
-.sub-header {
-    color: $teal-dark;
-    font-style: italic;
-    font-size: 1.5em;
+.skills-tech, .skills-framework {
+    display: none;
 }
+
+.skills-tech-large, .skills-framework-large {
+    display: inherit;
+}
+
+
 
 /* Overrides */
 
@@ -148,6 +157,22 @@ html .row {
 
 }
 
+@media all and (max-width: 960px) {
+    .skills-tech-large, .skills-framework-large {
+        display: none;
+    }
+    .skills-tech, .skills-framework {
+        display: inherit;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .site-section {
+        padding: 20px 30px 40px 30px;
+        margin: 20px 20px;
+    }
+}
+
 @media all and (max-width: 645px) {
     .page-logo-container {
         margin-top: 20px;
@@ -176,6 +201,9 @@ html .row {
         .col-sm-offset-3 {
             margin-left: 1.33333333%
         }
+    }
+    h2 {
+        font-size: 25px;
     }
 }
 
