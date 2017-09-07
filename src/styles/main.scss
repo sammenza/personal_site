@@ -157,6 +157,18 @@ html .row {
 
 }
 
+@media all and (min-width: 960px) {
+    .experience-section {
+        img {
+            filter: grayscale(100%);
+            transition : filter .2s linear
+        }
+        img:hover {
+            filter: grayscale(0%);
+        }
+    }
+}
+
 @media all and (max-width: 960px) {
     .skills-tech-large, .skills-framework-large {
         display: none;
