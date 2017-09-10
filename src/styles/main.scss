@@ -159,16 +159,38 @@ html .row {
 
 /* Work */
 
+.work-section {
+    .section-header {
+        padding-bottom: 30px;
+    }
+    .sub-section {
+        height: 370px;
+    }
+}
+
 .work-icollab {
     img {
         padding-left: 0px;
         padding-right: 0px;
+        width: 80%;
     }
     .icollab-img-1 {
         z-index: -1;
     }
     .icollab-img-2 {
         bottom: 200px;
+    }
+}
+
+.work-description {
+    margin-top: 4%;
+    h3 {
+        color: $teal-main;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    hr {
+        width: 100%;
     }
 }
 
