@@ -7,6 +7,7 @@ $teal-dark: #036960;
 
 /* Imports */
 @import './material-shadows.scss';
+@import './loader.scss';
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Poppins');
 
 @font-face {
@@ -43,7 +44,7 @@ hr {
     clear:both;
     display:block;
     width: 96%;
-    background-color:#FFFF00;
+    background-color:$gray-2;
     height: 1px;
 }
 
@@ -69,10 +70,62 @@ hr {
     font-size: 1.5em;
 }
 
+/* Animations */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes slideUp { from { bottom:-100px; } to { bottom:0; } }
+@-moz-keyframes slideUp { from { bottom:-100px; } to { bottom:0; } }
+@keyframes slideUp { from { margin-top: 248px } to { margin-top: 180px; } }
+
+
+.fade-in {
+    opacity:0;
+    animation-name: fadeIn;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:.5s;
+}
+
+.slide-up {
+    margin-top: 248px;
+    animation-name: slideUp;
+    -webkit-animation:slideUp ease-in 1;
+    -moz-animation:slideUp ease-in 1;
+    animation:slideUp ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:.7s;
+}
+
+.slide-out {
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateY(-100%);  /* IE 9 */
+    transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;
+    transition: all 0.3s 1s ease-out;
+}
+
 /* Intro */
 .intro {
     height: 80%;
-    background-image: url('../assets/backgrounds/front-page-teal-icon.svg');
+    background-image: url('../assets/backgrounds/front-page-teal-icon.png');
     background-size:cover;
     align-items: center;
 }
@@ -106,11 +159,15 @@ hr {
     }
 }
 
-.skills-tech, .skills-framework {
+.skills-tech, .skills-framework, .skills-design {
     display: none;
 }
 
-.skills-tech-large, .skills-framework-large {
+.skills-design-large {
+    max-width: 600px;
+}
+
+.skills-tech-large, .skills-framework-large, .skills-design-large {
     display: inherit;
 }
 
@@ -213,7 +270,7 @@ html .row {
     }
 }
 
-.work-datahub, .work-common, .work-wall {
+.work-datahub, .work-common, .work-wall, .work-dataviz {
     padding-top:50px;
 }
 
@@ -226,6 +283,7 @@ html .row {
 .contact-section {
     margin-top: 0px;
     margin-bottom: 0px;
+    min-height: 30px;
     i {
         font-size: 42px;
         color: $teal-main;
@@ -243,6 +301,7 @@ html .row {
         font-size: 62px;
         color: $gray-2;
         transition: color 1s;
+        padding: 5px;
     }
     i, .fa:hover {
         color: $gray-4;
@@ -252,6 +311,8 @@ html .row {
 /* Footer */
 footer {
     margin: 0px;
+    background-color: $teal-main;
+    height: 80px;
 }
 
 /* Media Queries */
@@ -385,6 +446,10 @@ footer {
     .work-section .section-header {
         padding-bottom: 0px;
     }
+    .work-datahub, .work-common, .work-wall, .work-dataviz {
+        padding-top: 0px;
+        padding-bottom: 8px;
+    }
 }
 
 @media all and (max-width: 645px) {
@@ -396,17 +461,22 @@ footer {
     }
 }
 
-@media only screen and (max-width: 480px) and (min-resolution: 300dpi) {
+@media only screen and (max-width: 480px) {
     .intro {
-        height: 53%;
+        height: 42%;
     }
     .page-logo-container {
         margin-top: 65px;
     }
+    .work-section {
+        font-size: 1.8rem;
+    }
     .quote-divider {
         h2 {
-            font-size: 1.3rem;
+            font-size: 2rem;
+            display: none;
         }
+        height: 5rem;
     }
     .intro {
         .col-sm-5 {
