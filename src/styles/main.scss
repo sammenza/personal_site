@@ -72,47 +72,6 @@ hr {
 
 /* Animations */
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-@-webkit-keyframes slideUp { from { bottom:-100px; } to { bottom:0; } }
-@-moz-keyframes slideUp { from { bottom:-100px; } to { bottom:0; } }
-@keyframes slideUp { from { margin-top: 248px } to { margin-top: 180px; } }
-
-
-.fade-in {
-    opacity:0;
-    animation-name: fadeIn;
-    -webkit-animation:fadeIn ease-in 1;
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:.5s;
-}
-
-.slide-up {
-    margin-top: 248px;
-    animation-name: slideUp;
-    -webkit-animation:slideUp ease-in 1;
-    -moz-animation:slideUp ease-in 1;
-    animation:slideUp ease-in 1;
-
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:.7s;
-}
-
 .slide-out {
     -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateY(-100%);  /* IE 9 */
@@ -120,6 +79,20 @@ hr {
 
     -webkit-transition: all 0.3s 1s ease-out;
     transition: all 0.3s 1s ease-out;
+}
+
+.bounce {
+    animation: bounce_an 1s infinite alternate;
+}
+
+@keyframes bounce_an {
+    0% {
+        margin-bottom: 1rem;
+    }
+
+    100% {
+        margin-bottom: 3rem;
+    }
 }
 
 /* Intro */
@@ -143,8 +116,22 @@ hr {
     font-size: 5rem;
     color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    div:first-child {
+        padding-top: 2rem;
+    }
     h2 {
         font-size: 2.8rem;
+        font-family: poppins;
+        i, .fa {
+            font-size: 6rem;
+            padding: 3px;
+        }
+        i, .fa:hover {
+            color: $gray-2;
+        }
+    }
+    .arrow {
+        max-height: 30px;
     }
 }
 
