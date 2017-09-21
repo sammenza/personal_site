@@ -75,6 +75,16 @@ hr {
 
 /* Animations */
 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+
+
 .slide-out {
     -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateY(-100%);  /* IE 9 */
@@ -86,6 +96,28 @@ hr {
 
 .bounce {
     animation: bounce_an 1s infinite alternate;
+}
+
+.fade-in {
+    animation:fadeIn 1s;
+    -moz-animation:fadeIn 1s; /* Firefox */
+    -webkit-animation:fadeIn 1s; /* Safari aend Chrome */
+    -o-animation:fadeIn 1s; /* Opera */
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+.fade-out {
+    animation:fadeOut 1s;
+    -moz-animation:fadeOut 1s; /* Firefox */
+    -webkit-animation:fadeOut 1s; /* Safari and Chrome */
+    -o-animation:fadeOut 1s; /* Opera */
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
 }
 
 @keyframes bounce_an {
