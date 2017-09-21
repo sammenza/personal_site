@@ -5,6 +5,9 @@ $gray-4: #383838;
 $teal-main: #089D90;
 $teal-dark: #036960;
 
+$hexagon-width: 50px;
+$hexagon-height: $hexagon-width*.55;
+
 /* Imports */
 @import './material-shadows.scss';
 @import './loader.scss';
@@ -94,6 +97,84 @@ hr {
         margin-bottom: 3rem;
     }
 }
+
+/* Navbar */
+
+.navbar-section {
+    position: fixed;
+    right: 5rem;
+    bottom: 33%;
+    ul {
+        li {
+            padding: 10px;
+            list-style-type: none;
+            a .nav-text {
+                margin-right: 10px;
+                color: $gray-2;
+                margin-right: 10px;
+                color: #747474;
+                background-color: white;
+                padding: 1px 30px 4px 4px;
+                border-radius: 7px;
+            }
+        }
+    }
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: $gray-2;
+    transition: background .7s;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.circle:hover {
+    background: #bcbcbc;
+}
+
+//.hexagon {
+//    width: $hexagon-width;
+//    height: $hexagon-height;
+//    background: $gray-2;
+//    position: relative;
+//    transition: background 1s;
+//    -webkit-transition : border 500ms ease-out;
+//    -moz-transition : border 500ms ease-out;
+//    -o-transition : border 500ms ease-out;
+//    transition: border 500ms ease-out;
+//}
+//
+//.hexagon:before {
+//    content: "";
+//    position: absolute;
+//    top: -$hexagon-width/4;
+//    left: 0;
+//    width: 0;
+//    height: 0;
+//    border-left: $hexagon-width/2 solid transparent;
+//    border-right: $hexagon-width/2 solid transparent;
+//    border-bottom: $hexagon-width/4 solid $gray-2;
+//}
+//
+//.hexagon:after {
+//    content: "";
+//    position: absolute;
+//    bottom: -$hexagon-width/4px;
+//    left: 0;
+//    width: 0;
+//    height: 0;
+//    border-left: $hexagon-width/2 solid transparent;
+//    border-right: $hexagon-width/2 solid transparent;
+//    border-top: $hexagon-width/4 solid $gray-2;
+//}
+//
+//.hexagon:hover {
+//    background: $teal-main;
+//    border-color: $teal-main;
+//}
 
 /* Intro */
 .intro {
