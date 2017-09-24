@@ -73,66 +73,10 @@ hr {
     font-size: 1.5em;
 }
 
-/* Animations */
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-
-
-
-.slide-out {
-    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateY(-100%);  /* IE 9 */
-    transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
-
-    -webkit-transition: all 0.3s 1s ease-out;
-    transition: all 0.3s 1s ease-out;
-}
-
-.bounce {
-    animation: bounce_an 1s infinite alternate;
-}
-
-.fade-in {
-    animation:fadeIn 1s;
-    -moz-animation:fadeIn 1s; /* Firefox */
-    -webkit-animation:fadeIn 1s; /* Safari aend Chrome */
-    -o-animation:fadeIn 1s; /* Opera */
-
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-}
-
-.fade-out {
-    animation:fadeOut 1s;
-    -moz-animation:fadeOut 1s; /* Firefox */
-    -webkit-animation:fadeOut 1s; /* Safari and Chrome */
-    -o-animation:fadeOut 1s; /* Opera */
-
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-}
-
-@keyframes bounce_an {
-    0% {
-        margin-bottom: 1rem;
-    }
-
-    100% {
-        margin-bottom: 3rem;
-    }
-}
-
 /* Navbar */
 
 .navbar-section {
+    z-index: 10;
     position: fixed;
     right: 5rem;
     bottom: 33%;
@@ -140,14 +84,13 @@ hr {
         li {
             padding: 10px;
             list-style-type: none;
-            a .nav-text {
-                margin-right: 10px;
+            .nav-text {
                 color: $gray-2;
-                margin-right: 10px;
                 color: #747474;
                 background-color: white;
                 padding: 1px 30px 4px 4px;
                 border-radius: 7px;
+                margin-right: 10px;
             }
         }
     }
@@ -157,14 +100,15 @@ hr {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background: $gray-2;
+    background-color: $gray-2;
     transition: background .7s;
     padding-left: 0px;
     padding-right: 0px;
+    transition: background-color 1s;
 }
 
 .circle:hover {
-    background: #bcbcbc;
+    background-color: #bcbcbc;
 }
 
 //.hexagon {
@@ -430,6 +374,80 @@ footer {
     margin: 0px;
     background-color: $teal-main;
     height: 80px;
+}
+
+/* Animations */
+
+.nav-text {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.full-opacity {
+    opacity: 1
+}
+
+.no-opacity {
+    opacity: 0;
+}
+
+.active {
+    background-color: #11D4C3;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+
+
+.slide-out {
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateY(-100%);  /* IE 9 */
+    transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;
+    transition: all 0.3s 1s ease-out;
+}
+
+.bounce {
+    animation: bounce_an 1s infinite alternate;
+}
+
+.fade-in {
+    animation:fadeIn 1s;
+    -moz-animation:fadeIn 1s; /* Firefox */
+    -webkit-animation:fadeIn 1s; /* Safari aend Chrome */
+    -o-animation:fadeIn 1s; /* Opera */
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+.fade-out {
+    animation:fadeOut 1s;
+    -moz-animation:fadeOut 1s; /* Firefox */
+    -webkit-animation:fadeOut 1s; /* Safari and Chrome */
+    -o-animation:fadeOut 1s; /* Opera */
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@keyframes bounce_an {
+    0% {
+        margin-bottom: 1rem;
+    }
+
+    100% {
+        margin-bottom: 3rem;
+    }
 }
 
 /* Media Queries */

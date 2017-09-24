@@ -6,8 +6,15 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
-    <!-- Scripts -->
     <script src="js/loading.js"></script>
+    <!-- CDN Libraries -->
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="node_modules/smoothscroll/smoothscroll.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -33,10 +40,11 @@
 
     <section class="navbar-section navbar-large">
         <ul>
-            <li><a class="row"><span class="col-sm-8 nav-text"> About </span><div class="col-sm-2 circle" onmouseenter="fadeIn('about')" onmouseleave="fadeOut('about')"></div></a></li>
-            <li><a class="row"><span class="col-sm-8 nav-text"> Skills </span><div class="col-sm-2 circle"></div></a></li>
-            <li><a class="row"><span class="col-sm-8 nav-text"> Experience </span><div class="col-sm-2 circle"></div></a></li>
-            <li><a class="row"><span class="col-sm-8 nav-text"> Work </span><div class="col-sm-2 circle"></div></a></li>
+            <li><span class="col-sm-8 nav-text"> About </span><a href="#about" class="row"><div class="col-sm-2 circle"></div></a></li>
+            <li><span class="col-sm-8 nav-text"> Skills </span><a href="#skills" class="row"><div class="col-sm-2 circle"></div></a></li>
+            <li><span class="col-sm-8 nav-text"> Experience </span><a href="#experience" class="row"><div class="col-sm-2 circle"></div></a></li>
+            <li><span class="col-sm-8 nav-text"> Work </span><a href="#work" class="row"><div class="col-sm-2 circle"></div></a></li>
+            <li><span class="col-sm-8 nav-text"> Contact </span><a href="#contact" class="row"><div class="col-sm-2 circle"></div></a></li>
         </ul>
     </section>
 
@@ -57,7 +65,7 @@
             </div>
         </section>
 
-        <section class="site-section skills-section col-sm-8 col-sm-offset-2 shadow-2">
+        <section id="skills" class="site-section skills-section col-sm-8 col-sm-offset-2 shadow-2">
             <div class="row-fluid">
                 <h2 class="section-header col-sm-12"> Skills </h2>
             </div>
@@ -88,7 +96,7 @@
             </div>
         </section>
 
-        <section class="site-section xp-section col-sm-12 shadow-2">
+        <section id="experience" class="site-section xp-section col-sm-12 shadow-2">
             <div class="row-fluid">
                 <h2 class="section-header col-sm-12"> Experience </h2>
             </div>
@@ -159,7 +167,7 @@
             </div>
         </section>
 
-        <section class="site-section work-section col-sm-12">
+        <section id="work" class="site-section work-section col-sm-12">
             <div class="row">
                 <h2 class="section-header col-sm-6"> Some of my work </h2>
             </div>
@@ -286,7 +294,7 @@
 
         <hr>
 
-        <section class="site-section contact-section col-sm-7 col-sm-offset-3">
+        <section id="contact" class="site-section contact-section col-sm-7 col-sm-offset-3">
             <div class="row">
                 <h2 class="section-header col-sm-12"> Get in touch, email me at <span class="contact-email"> sam.a.mez@gmail.com </span> </h2>
             </div>
