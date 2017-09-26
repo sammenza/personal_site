@@ -101,10 +101,9 @@ hr {
     height: 20px;
     border-radius: 10px;
     background-color: $gray-2;
-    transition: background .7s;
     padding-left: 0px;
     padding-right: 0px;
-    transition: background-color 1s;
+    transition: background-color .5s;
 }
 
 .circle:hover {
@@ -380,7 +379,7 @@ footer {
 
 .nav-text {
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .6s;
 }
 
 .full-opacity {
@@ -392,6 +391,10 @@ footer {
 }
 
 .active {
+    background-color: #11D4C3;
+}
+
+.active:hover {
     background-color: #11D4C3;
 }
 
