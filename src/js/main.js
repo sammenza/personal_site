@@ -37,5 +37,32 @@ $(window).scroll(function(event){
     }
 })
 
+var navbarToggle = false;
+
+$('.navbar-burger').click(function(event) {
+    if (!navbarToggle) {
+        $('.navbar-small-menu').css('max-height', 300);
+        $('.navbar-small').addClass('shadow-1');
+        $('.navbar-small').css('background-color', 'white');
+        $('.navbar-small-menu ul li a').css('color', 'teal');
+        navbarToggle = true;
+    } else {
+        $('.navbar-small-menu').css('max-height', 0);
+        $('.navbar-small').removeClass('shadow-1');
+        $('.navbar-small').css('background-color', 'transparent');
+        $('.navbar-small-menu ul li a').css('color', 'transparent');
+        navbarToggle = false;
+    }
+})
+
+$('.navbar-small-menu ul li a').click(function(event) {
+        $('.navbar-small-menu').css('max-height', 0);
+        $('.navbar-small').removeClass('shadow-1');
+        $('.navbar-small').css('background-color', 'transparent');
+        $('.navbar-small-menu ul li a').css('color', 'transparent');
+        navbarToggle = false;
+})
+
+
 
 

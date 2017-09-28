@@ -30,6 +30,10 @@ html {
     text-align:center;
 }
 
+ul li {
+    list-style-type: none;
+}
+
 /* Flex Classes */
 
 .flex {
@@ -77,6 +81,33 @@ hr {
 
 .navbar-large {
     display: none;
+}
+
+.navbar-small {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 50;
+}
+
+.navbar-small-menu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .55s, background-color 2s;
+    ul li a{
+        color: teal;
+        text-decoration: none;
+        font-size: 3.7rem;
+        padding: .0006rem;
+        font-weight: bold;
+        font-family: Poppins;
+    }
+}
+
+.navbar-burger {
+    color: #606060;
+    font-size: 40px;
+    padding: 5px 5px 5px 15px;
 }
 
 .navbar-section {
@@ -277,7 +308,7 @@ html .row {
     margin: .5rem;
     background-color: #00adad;
     border-radius: 7px;
-    padding: .5rem;
+    padding: 5px;
     color: white;
     font-weight: 600;
 }
@@ -314,6 +345,9 @@ html .row {
     }
     hr {
         width: 100%;
+    }
+    p span {
+        display: inline-block;
     }
 }
 
@@ -565,7 +599,22 @@ footer {
     }
 }
 
+@media all and (min-width: 768px) {
+    .navbar-large {
+        display: inline-block;
+    }
+    .navbar-small {
+        display: none;
+    }
+}
+
 @media all and (max-width: 768px) {
+    #site-content .navbar-large {
+        display: none !important;
+    }
+    .navbar-small {
+        display: inline-block;
+    }
     .intro {
         height: 57%;
     }
