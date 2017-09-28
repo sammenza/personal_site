@@ -11,6 +11,32 @@ $('.circle').click(function(event) {
     $(this).addClass('active');
 })
 
+var checkInitialPosition = function checkInitialPosition() {
+    var last_known_scroll_position = window.scrollY;
+    if (last_known_scroll_position < $('#about').position().top) { $('.navbar-large').hide(); }
+    if (last_known_scroll_position >= $('#about').position().top) {
+        $('.navbar-large').show();
+        $('.circle').removeClass('active');
+        $('.circle').eq(0).addClass('active');
+    }
+    if (last_known_scroll_position > $('#skills').position().top) {
+        $('.circle').removeClass('active');
+        $('.circle').eq(1).addClass('active');
+    }
+    if (last_known_scroll_position > $('#experience').position().top) {
+        $('.circle').removeClass('active');
+        $('.circle').eq(2).addClass('active');
+    }
+    if (last_known_scroll_position > $('#work').position().top) {
+        $('.circle').removeClass('active');
+        $('.circle').eq(3).addClass('active');
+    }
+    if (last_known_scroll_position + $(window).height() >= $(document).height() - 100) {
+        $('.circle').removeClass('active');
+        $('.circle').eq(4).addClass('active');
+    }
+}
+
 $(window).scroll(function(event){
     var last_known_scroll_position = window.scrollY;
     if (last_known_scroll_position < $('#about').position().top) { $('.navbar-large').hide(); }
@@ -62,6 +88,8 @@ $('.navbar-small-menu ul li a').click(function(event) {
         $('.navbar-small-menu ul li a').css('color', 'transparent');
         navbarToggle = false;
 })
+
+checkInitialPosition();
 
 
 

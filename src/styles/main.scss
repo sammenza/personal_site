@@ -10,7 +10,7 @@ $hexagon-height: $hexagon-width*.55;
 
 /* Imports */
 @import './material-shadows.scss';
-@import './loader.scss';
+//@import './loader.scss';
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Poppins');
 
 @font-face {
@@ -144,47 +144,6 @@ hr {
 .circle:hover {
     background-color: #bcbcbc;
 }
-
-//.hexagon {
-//    width: $hexagon-width;
-//    height: $hexagon-height;
-//    background: $gray-2;
-//    position: relative;
-//    transition: background 1s;
-//    -webkit-transition : border 500ms ease-out;
-//    -moz-transition : border 500ms ease-out;
-//    -o-transition : border 500ms ease-out;
-//    transition: border 500ms ease-out;
-//}
-//
-//.hexagon:before {
-//    content: "";
-//    position: absolute;
-//    top: -$hexagon-width/4;
-//    left: 0;
-//    width: 0;
-//    height: 0;
-//    border-left: $hexagon-width/2 solid transparent;
-//    border-right: $hexagon-width/2 solid transparent;
-//    border-bottom: $hexagon-width/4 solid $gray-2;
-//}
-//
-//.hexagon:after {
-//    content: "";
-//    position: absolute;
-//    bottom: -$hexagon-width/4px;
-//    left: 0;
-//    width: 0;
-//    height: 0;
-//    border-left: $hexagon-width/2 solid transparent;
-//    border-right: $hexagon-width/2 solid transparent;
-//    border-top: $hexagon-width/4 solid $gray-2;
-//}
-//
-//.hexagon:hover {
-//    background: $teal-main;
-//    border-color: $teal-main;
-//}
 
 /* Intro */
 .intro {
