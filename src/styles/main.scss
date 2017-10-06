@@ -71,6 +71,10 @@ hr {
     }
 }
 
+.page-logo-container {
+    margin-bottom: 56px;
+}
+
 .sub-header {
     color: $teal-dark;
     font-style: italic;
@@ -123,12 +127,16 @@ hr {
                 color: $gray-2;
                 color: #747474;
                 background-color: white;
-                padding: 1px 30px 4px 4px;
+                padding: 1px 5px 4px 4px;
                 border-radius: 7px;
                 margin-right: 10px;
             }
         }
     }
+}
+
+.navbar-section ul li .navbar-large-experience {
+    padding: 1px 40px 4px 10px;
 }
 
 .circle {
