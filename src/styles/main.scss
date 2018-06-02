@@ -411,6 +411,11 @@ footer {
     height: 80px;
 }
 
+.contact-icons {
+    display: flex;
+    justify-content: center;
+}
+
 /* Animations */
 
 .nav-text {
@@ -518,6 +523,12 @@ footer {
     }
 }
 
+@media all and (max-width: 1150px) {
+    .contact-icons {
+        justify-content: flex-start;
+    }
+}
+
 @media all and (min-width: 960px) {
     .experience-section {
         img {
@@ -620,6 +631,9 @@ footer {
     .work-datahub, .work-common, .work-wall, .work-dataviz {
         padding-top: 0px;
         padding-bottom: 8px;
+    }
+    .contact-section {
+        padding: 1rem;
     }
 }
 
