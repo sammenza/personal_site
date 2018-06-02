@@ -61,12 +61,17 @@ hr {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     color: $teal-main;
+    align-self: flex-start;
 }
 
 .site-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 30px;
     min-height: 300px;
     padding-bottom: 40px;
+    align-self: center;
     .description {
         font-size: 1.3em;
         padding-top: 15px;
@@ -81,6 +86,12 @@ hr {
     color: $teal-dark;
     font-style: italic;
     font-size: 1.5em;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Navbar */
@@ -303,27 +314,31 @@ html .row {
     .section-header {
         padding-bottom: 30px;
     }
+}
+
+.work-sub-section {
+    display: flex;
     .img-sub-section {
-        height: 370px;
+        display: flex;
+        flex-direction: column;
+    }
+    .work-description {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 .img-sub-section {
+    max-width: 50%;
+    margin-top: 20px;
     img {
         padding-left: 0px;
         padding-right: 0px;
         width: 80%;
     }
-    .work-img-1 {
-        z-index: -1;
-    }
-    .work-img-2 {
-        bottom: 200px;
-    }
 }
 
 .work-description {
-    margin-top: 4%;
     h3 {
         color: $teal-main;
         font-size: 30px;
@@ -338,9 +353,6 @@ html .row {
 }
 
 .work-huskytech {
-    .work-img-2 {
-        bottom: 240px;
-    }
     .img-sub-section div:first-child {
         max-height: 300px;
         overflow: hidden;
@@ -491,15 +503,6 @@ footer {
     }
 }
 
-@media all and (max-width: 1309px) and (min-width: 947px){
-    .work-icollab {
-        max-height: 200px;
-    }
-    .work-huskytech .img-sub-section div:first-child{
-        margin-bottom: -30px;
-    }
-}
-
 @media all and (max-width: 1140px) {
     .page-logo-container {
         margin-top: 124px;
@@ -513,24 +516,6 @@ footer {
             width: 75%;
         }
     }
-    .work-section .img-sub-section {
-        padding-top: 50px;
-        height: inherit;
-        max-height: 200px;
-    }
-    .work-datahub, .work-common, .work-wall {
-        padding-top:0px;
-    }
-    .work-huskytech .img-sub-section div:first-child, .work-effyblue .img-sub-section div:first-child {
-        max-height: 200px;
-        overflow: hidden;
-    }
-    .work-huskytech .work-img-2, .work-effyblue .work-img-2 {
-        bottom: 160px;
-    }
-    .img-sub-section .work-img-2 {
-        bottom: 120px;
-    }
 }
 
 @media all and (min-width: 960px) {
@@ -543,6 +528,11 @@ footer {
             filter: grayscale(0%);
         }
     }
+    .site-section {
+        max-width: 70%;
+        padding: 20px 30px 40px 30px;
+        margin: 2rem 0px 0px 0px;
+    }
 }
 
 @media all and (max-width: 960px) {
@@ -552,23 +542,13 @@ footer {
     .skills-tech, .skills-framework {
         display: inherit;
     }
-}
-
-@media all and (max-width: 960px) {
-    .site-section {
-        padding: 20px 30px 40px 30px;
-        margin: 0px;
+    .shadow-2 {
+        box-shadow: none;
     }
-}
-
-@media all and (max-width: 960px) {
     .xp-section .xp-container {
         width: 100%;
         margin-left: 0px;
     }
-}
-
-@media all and (max-width: 948px) {
     .xp-section {
         .col-sm-5 {
             width: 95%;
@@ -578,10 +558,18 @@ footer {
     .xp-section .xp-container {
         margin-top: 23px;
     }
-    .work-huskytech {
-        .work-img-2 {
-            bottom: 110px;
+    .work-section {
+        padding: 1.5rem;
+    }
+    .work-sub-section {
+        flex-direction: column;
+        .img-sub-section {
+            max-width: 80%;
         }
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -595,6 +583,9 @@ footer {
     .mobile-intro, .mobile-divider {
         display: none;
     }
+    #experience {
+        max-width: 100%;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -604,10 +595,10 @@ footer {
     .navbar-small {
         display: inline-block;
     }
-    .intro, .quote-divider, .face-logo, footer {
+    .intro, .quote-divider, .face-logo, footer   {
         display: none;
     }
-    section, .shadow-2 {
+    section {
         box-shadow: none;
     }
     .intro {
@@ -619,15 +610,9 @@ footer {
     .mobile-no-display {
         display:none;
     }
-    .img-sub-section .work-img-2 {
-        bottom: 0px;
-    }
     .work-effyblue .img-sub-section div:first-child {
         max-height: 100%;
         overflow: initial;
-    }
-    .work-img-2 {
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
     .work-section .section-header {
         padding-bottom: 0px;
