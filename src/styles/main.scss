@@ -34,6 +34,8 @@ ul li {
     list-style-type: none;
 }
 
+/* General Classes */
+
 /* Flex Classes */
 
 .flex {
@@ -89,6 +91,7 @@ hr {
 
 .navbar-small {
     position: fixed;
+    background-color: white;
     top: 0px;
     width: 100%;
     z-index: 50;
@@ -103,14 +106,13 @@ hr {
         text-decoration: none;
         font-size: 3.7rem;
         padding: .0006rem;
-        font-weight: bold;
         font-family: Poppins;
     }
 }
 
 .navbar-burger {
     color: #606060;
-    font-size: 40px;
+    font-size: 30px;
     padding: 5px 5px 5px 15px;
 }
 
@@ -418,8 +420,8 @@ footer {
     -ms-transform: translateY(-100%);  /* IE 9 */
     transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
 
-    -webkit-transition: all 0.3s 1s ease-out;
-    transition: all 0.3s 1s ease-out;
+    -webkit-transition: all 0.3s .3s ease-out;
+    transition: all 0.3s .3s ease-out;
 }
 
 .bounce {
@@ -538,7 +540,7 @@ footer {
 @media all and (max-width: 960px) {
     .site-section {
         padding: 20px 30px 40px 30px;
-        margin: 20px 20px;
+        margin: 0px;
     }
 }
 
@@ -571,6 +573,9 @@ footer {
         display: inline-block;
     }
     .navbar-small {
+        display: none !important;
+    }
+    .mobile-divider {
         display: none;
     }
 }
@@ -581,6 +586,9 @@ footer {
     }
     .navbar-small {
         display: inline-block;
+    }
+    section, .shadow-2 {
+        box-shadow: none;
     }
     .intro {
         height: 57%;
