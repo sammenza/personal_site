@@ -167,6 +167,23 @@ hr {
     width: 100%;
 }
 
+.mobile-intro {
+    background-image: url('../assets/backgrounds/front-page-teal-no-white.png');
+    background-size: cover;
+    background-color: $teal-main;
+    display:flex;
+    align-items: center;
+    h2, h4 {
+        color: white;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h4 {
+        font-size: 1.4em;
+    }
+}
+
 /* Quote Diver */
 
 .quote-divider {
@@ -575,7 +592,7 @@ footer {
     .navbar-small {
         display: none !important;
     }
-    .mobile-divider {
+    .mobile-intro, .mobile-divider {
         display: none;
     }
 }
@@ -586,6 +603,9 @@ footer {
     }
     .navbar-small {
         display: inline-block;
+    }
+    .intro, .quote-divider, .face-logo, footer {
+        display: none;
     }
     section, .shadow-2 {
         box-shadow: none;
